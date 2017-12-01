@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-1.10.1.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div class="img">
+			<img src="img/b.JPG"/>
+		</div>
+		
+		<br />
+		<button>绑定事件</button>
+		<button>解除事件</button>
+	</body>
+	<script type="text/javascript">
+		var i=0;
+		$('button').eq(0).click(function(){
+			$('img').bind('click',function(){
+				if(i%2==0){
+					this.src = 'img/a.JPG';
+				}else{
+					this.src = 'img/b.JPG'	
+				}
+				i++;
+			});
+		});
+		$('button').eq(1).click(function(){
+			$('img').unbind('click');
+		});
+	</script>
+</html>

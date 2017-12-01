@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-1.10.1.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/demo2.css"/>
+	<body>
+		<div class="menu">
+			<ul>
+				<li>php</li>
+				<li>jQuery</li>
+				<li>javascript</li>
+			</ul>
+		</div>
+		<div class="info">
+			<p>内容1</p>
+			<p>内容2</p>
+			<p>内容3</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('.menu li').eq(0).css({'background':'#ccc'});
+		$('.menu li').mouseenter(function(){ //点击事件
+			
+			$(this).css({'background':'#ccc'});
+			$('.menu li').not($(this)).css({'background':'black'}) //除了自己 其余都变为原本的颜色
+			
+			idx = $(this).index('.menu li');//获取li所在的下标位置 index 就是获取下标位置
+			$('.info p').eq(idx).show();   //利用所对应的下标位置去显示第eq(idx)个 P标签的内容
+			$('.info p').not($('.info p').eq(idx)).hide();  // 将其余的p标签屏蔽
+		});
+	</script>
+</html>

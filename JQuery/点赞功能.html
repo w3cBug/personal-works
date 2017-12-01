@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/jquery-1.10.1.js" type="text/javascript" charset="utf-8"></script>
+		<body>
+		<div class="img">
+			<img src="img/b.JPG"/>
+		</div>
+		
+		<br />
+		<button>点赞(<span>0</span>)</button>
+	</body>
+	<script type="text/javascript">
+		$('button').click(function(){
+			val = parseInt($('span').html())+1;  
+			$('span').html(val);
+			$(this).css({'color':'#fff','background':'#00f'});
+		});
+		$('button').mouseleave(function(){
+			$(this).css({'color':'black','background':'white'});
+		})
+	</script>
+</html>

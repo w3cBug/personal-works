@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0 auto;
+			padding: 0 ;
+		}
+		.shop {
+			/*border: 1px solid firebrick;*/
+			width: 600px;
+			height: 600px;
+			overflow: hidden;
+			/*box-shadow: 0 0 5px 5px silver;*/
+			margin-left: 20px;
+		}
+		.img {
+			position: absolute;
+			width: 300px;
+			height: 300px;
+			display: none;
+		}
+	</style>
+	<script src="js/jquery-1.10.1.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div class="shop">
+			<img src="img/a.jpg"/ >
+		</div>
+		<div class="img">
+			<img src="img/b.JPG"/  width="100%">
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('.shop').mouseenter(function(){
+			var w = $(this).width()
+			x = $(this).offset().left;
+			y = $(this).offset().top+w+10;
+			$('.img').show().css({'left':x+'px','top':y+'px'})
+		})
+		
+		$('.shop').mouseout(function(){
+			$('.img').hide()
+		})
+	</script>
+</html>

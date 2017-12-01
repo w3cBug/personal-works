@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+</head>
+<script src="js/jquery-1.10.1.min.js"></script>
+<body>
+	<h1>aaaaaaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaaaaaaaaaa</h1>
+</body>
+<script>
+	$('h1').each(function(i){
+		$('h1').get()[i].setAttribute('num',i+1)  // js和jquery混合写法
+	});
+	$('h1').click(function(){
+		this.innerHTML = this.getAttribute('num')
+	});
+	$('h1').hover(
+		function(){
+		this.style.backgroundColor = '#ccc'
+	},
+		function(){
+		this.style.backgroundColor = '#fff'	
+		});
+</script>
+</html>

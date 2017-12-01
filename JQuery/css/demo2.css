@@ -1,0 +1,36 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: "微软雅黑";
+}
+.menu {
+	width: 100%;
+	height: 50px;
+	background-color:black ;
+	
+}
+.menu ul li{
+	height: 50px;
+	float: left;	
+	margin-left: 20px;
+	line-height: 50px;
+	font-size: 16px;
+	color: white;
+	width: 80px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.info {
+	width: 100%;
+	height: 300px;
+	background-color: #ccc;
+}
+.info p {
+	display: none;
+}
+.info p:first-child {
+	display: block;
+}

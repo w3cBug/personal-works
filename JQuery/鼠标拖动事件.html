@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#div1  {
+			position: absolute;
+
+
+		}
+	</style>
+	<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div id="div1">
+			<img src="img/logo.png"/>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		function drag(obj){
+			obj.on('mousedown',start);
+			function start(event){
+				deltaX = event.clientX-obj.offset().left;
+				deltaY = event.clientY-obj.offset().top;
+				
+				$(document).on('mousemove',move);
+				$(document).on('mouseup',stop);
+				//能阻止默认行为发生
+				//能阻止事件冒泡发生
+				return false;
+			}
+			function move(event){
+				obj.css({
+					'left':(event.clientX - deltaX) + 'px',
+					'top':(event.clientY - deltaY) + 'px'
+				})
+				return false;
+			}
+			function stop(){
+				$(document).off('mousemove',move);
+				$(document).off('mouseup',stop);
+			}
+		}
+	obj = $('#div1');
+	drag(obj);
+	</script>
+</html>

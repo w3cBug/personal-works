@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		* {
+			font-family: "微软雅黑";
+			padding: 0px;
+			margin: 0px;
+			text-decoration: none;
+			list-style: none;
+		}
+		.main {
+			width: 1200px;
+			height: 600px;
+			background: #eee;
+			margin: 0 auto;
+			position: relative;
+		}
+		.nav-left {
+			width:250px;
+			height: 600px;
+			background: red;
+		}
+		.nav-left ul li {
+			width: 250px;
+			height: 40px;
+			line-height: 40px;
+			cursor: pointer;
+		}
+	
+		.nav-left ul li a {
+			margin-left: 15px;
+			color: #eee;
+			
+		}
+		.nav-right {
+			height: 600px;
+			width: 950px;
+			position: absolute;
+			top:0px;
+			left:250px;
+			display: none;
+		}
+	</style>
+	<script src="js/jquery-1.10.1.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div class="main">
+			<div class="nav-left">
+				<ul>
+					<li class="banner">
+						<a href="">家用电器</a>
+						<div class="nav-right">
+							<h3>家用电器</h3>
+							<p> 家用电器是家用电器是
+							家用电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用电器是家
+							用电器是家用电器是家用电器是家用电器是
+							家用电器是</p>
+						</div>
+					</li>
+					<li>
+						<a href="">手机、数码、京东通讯</a>
+						<div class="nav-right">
+							<h3>手机、数码、京东通讯</h3>
+							<p> 家用电器是家用电器是
+							家用电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用电器是家
+							用电器是家用电器是家用电器是家用电器是
+							家用电器是</p>
+						</div>
+					</li>
+					<li>
+						<a href="">电脑、办公</a>
+						<div class="nav-right">
+							<h3>电脑、办公</h3>
+							<p> 家用电器是家用电器是
+							家用电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用电器是家
+							用电器是家用电器是家用电器是家用电器是
+							家用电器是</p>
+						</div>
+					</li>
+					<li>
+						<a href="">家居、家具、家装、厨具</a>
+						<div class="nav-right">
+							<h3>家居、家具、家装、厨具</h3>
+							<p> 家用电器是家用电器是
+							家用电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用电器是家
+							用电器是家用电器是家用电器是家用电器是
+							家用电器是</p>
+						</div>
+					</li>
+					<li>
+						<a href="">男装、女装、童装、内衣</a>
+						<div class="nav-right">
+							<h3>男装、女装、童装、内衣</h3>
+							<p> 家用电器是家用电器是
+							家用电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用电器是家
+							用电器是家用电器是家用电器是家用电器是
+							家用电器是</p>
+						</div>
+					</li>
+					<li>
+						<a href="">个性化装、清洁用品</a>
+						<div class="nav-right">
+							<h3>个性化装、清洁用品</h3>
+							<p> 家用电器是家用电器是
+							家用电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用
+							电器是家用电器是家用电器是家用电器是家
+							用电器是家用电器是家用电器是家用电器是
+							家用电器是</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>		                            
+	</body>
+	<script type="text/javascript">
+		$('.nav-right').eq(0).show()
+		
+		$('.nav-left ul li').mouseenter(function(){
+			$(this).css({'background':'#eee'});
+			$(this).find('a').css({'color':'red'});  
+			$('.nav-left ul li').not($(this)).css({'background':'red'});
+			
+			$(this).find('.nav-right').show()
+			$('.nav-right').not($(this)).find('.nav-right').hide()
+		});
+		$('.nav-left ul li').mouseleave(function(){
+			$(this).find('a').css({'color':'#eee'}); 
+			$(this).css({'background':'red'});
+			$(this).find('.nav-right').hide()
+		}); q
+	</script>
+</html>
